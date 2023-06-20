@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header-------------------------------------------------- -->
+    <header class="bg-primary bg-gradient p-5 text-white">
+      <h1>Admin Page</h1>
+    </header>
+
+    <!-- form ----------------------------------------------- -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form id="AddProductForm" action="" class="form card p-4 mt-5">
+            <h3 class="bg-info p-3">Add Product</h3>
+            <label for="productName" class="form-label mt-3"
+              >Product Name:</label
+            >
+            <input
+              id="ProdName"
+              type="text"
+              class="form-control"
+              name="productName"
+            />
+            <label for="productPrice" class="form-label mt-3"
+              >Product Price:</label
+            >
+            <input
+              id="ProdPrice"
+              type="text"
+              class="form-control"
+              name="productPrice"
+            />
+
+            <label for="productPrice" class="form-label mt-3"
+              >Product Categories:</label
+            >
+            <select
+              id="ProdCategorie"
+              name="categories"
+              id=""
+              class="form-select"
+            >
+              <option value="Electronics">Electronics</option>
+              <option value="Food">Food</option>
+              <option value="SkinCare">Skin Care</option>
+            </select>
+
+            <input
+              type="submit"
+              value="Submit"
+              class="btn-primary btn mt-5 bg-dark"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================= -->
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>Electronics</h1>
+
+          <ul id="List" class="list-group"></ul>
+        </div>
+        <div class="col-md-4">
+          <h1>Food</h1>
+          <ul id="F_List" class="list-group"></ul>
+        </div>
+        <div class="col-md-4">
+          <h1>Skin Care</h1>
+          <ul id="S_List" class="list-group"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts ------------------------------------------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
